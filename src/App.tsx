@@ -5,7 +5,6 @@ import Gender from "./pages/Gender";
 import Job from "./pages/Job";
 import Hobby from "./pages/Hobby";
 import Summary from "./pages/Summary";
-import './App.module.css';
 
 function App() {
   return (
