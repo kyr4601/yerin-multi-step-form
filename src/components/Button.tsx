@@ -14,7 +14,11 @@ const Button = ({ type, children }: BtnProps) => {
 
   function moveNextPage() {
     const currentPage = pages.indexOf(location.pathname);
-    if (currentPage !== -1) {
+
+    if (currentPage === pages.length - 1) {
+      alert('제출이 완료되었어요!');
+      navigate('/');
+    } else {
       navigate(pages[currentPage + 1]);
     }
   }
