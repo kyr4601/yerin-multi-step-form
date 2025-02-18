@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import Main from "./pages/main";
+import Main from "./pages/Main";
 import Name from "./pages/Name";
 import Gender from "./pages/Gender";
 import Job from "./pages/Job";
 import Hobby from "./pages/Hobby";
 import Summary from "./pages/Summary";
+import './App.module.css';
 
 function App() {
   return (
