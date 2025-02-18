@@ -1,9 +1,5 @@
 const Gender = () => {
-  return (
-    <div>
-      gender
-    </div>
-  )
-}
+  return <div>gender</div>;
+};
 
-export default Gender
+export default Gender;

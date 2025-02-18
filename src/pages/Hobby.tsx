@@ -1,9 +1,5 @@
 const Hobby = () => {
-  return (
-    <div>
-      hobby
-    </div>
-  )
-}
+  return <div>hobby</div>;
+};
 
-export default Hobby
+export default Hobby;
