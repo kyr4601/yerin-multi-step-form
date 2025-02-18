@@ -9,9 +9,10 @@ const Main = () => {
   }
 
   return (
-    <div className={s.container}>
+    <section className={s.container}>
+      <h1>시작!</h1>
       <button onClick={handleNextBtn}>작성하기</button>
-    </div>
+    </section>
   );
 };
 
