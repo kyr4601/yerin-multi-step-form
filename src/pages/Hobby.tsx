@@ -16,13 +16,18 @@ const hobbies = [
 
 const Hobby = () => {
   const [selected, setSelected] = useState<string[]>([]);
+  const [isDisabled, setIsDisabled] = useState(true);
 
   function handleCheck(hobby: string) {
+    let newSelected = selected;
     if (selected.includes(hobby)) {
-      setSelected(selected.filter((item) => item !== hobby));
+      newSelected = selected.filter((item) => item !== hobby);
     } else if (selected.length < 3) {
-      setSelected([...selected, hobby]);
+      newSelected = [...selected, hobby];
     }
+
+    setSelected(newSelected);
+    setIsDisabled(newSelected.length === 0);
   }
   return (
     <section className={s.container}>
@@ -39,7 +44,9 @@ const Hobby = () => {
       </div>
       <div className={s.btnContainer}>
         <Button type={'prev'}>이전</Button>
-        <Button type={'next'}>다음</Button>
+        <Button type={'next'} isDisabled={isDisabled}>
+          다음
+        </Button>
       </div>
     </section>
   );
