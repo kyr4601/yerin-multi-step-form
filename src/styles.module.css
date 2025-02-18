@@ -1,8 +1,24 @@
 .container {
-    width: 350px;
-    height: 600px;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 350px;
+  height: 600px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.btnContainer {
+  width: 100%;
+  display: flex;
+}
+
+.button {
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
 }
