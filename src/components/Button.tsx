@@ -5,12 +5,14 @@ import { ReactNode } from 'react';
 type BtnProps = {
   type: string;
   children: ReactNode;
+  isDisabled?: boolean;
 };
 
-const Button = ({ type, children }: BtnProps) => {
+const pages = ['/', '/name', '/gender', '/job', '/hobby', '/summary'];
+
+const Button = ({ type, children, isDisabled = false }: BtnProps) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const pages = ['/', '/name', '/gender', '/job', '/hobby', '/summary'];
 
   function moveNextPage() {
     const currentPage = pages.indexOf(location.pathname);
@@ -32,7 +34,7 @@ const Button = ({ type, children }: BtnProps) => {
   }
 
   return (
-    <button className={s.button} onClick={handleClick}>
+    <button className={s.button} onClick={handleClick} disabled={isDisabled}>
       {children}
     </button>
   );
