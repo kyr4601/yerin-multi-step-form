@@ -1,8 +1,23 @@
+import { BrowserRouter, Routes, Route } from "react-router";
+import Main from "./pages/main";
+import Name from "./pages/Name";
+import Gender from "./pages/Gender";
+import Job from "./pages/Job";
+import Hobby from "./pages/Hobby";
+import Summary from "./pages/Summary";
+
 function App() {
   return (
-    <>
-      <div>다단계 폼 관리 앱 구현 과제 시작</div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main/>}/>
+        <Route path="/name" element={<Name/>}/>
+        <Route path="/gender" element={<Gender/>}/>
+        <Route path="/job" element={<Job/>}/>
+        <Route path="/hobby" element={<Hobby/>}/>
+        <Route path="/summary" element={<Summary/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
