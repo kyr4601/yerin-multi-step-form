@@ -22,3 +22,10 @@
   justify-content: center;
   width: 80%;
 }
+
+.checkContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
