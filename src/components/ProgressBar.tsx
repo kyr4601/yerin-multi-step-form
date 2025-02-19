@@ -4,6 +4,9 @@ import { useLocation } from 'react-router';
 
 const pages = ['/', '/name', '/gender', '/job', '/hobby', '/summary'];
 
+/* 프로그레스 바 컴포넌트 */
+/* 경로에 따라 진행도와 단계를 보여줍니다. */
+
 const ProgressBar = () => {
   const [progress, setProgress] = useState(0);
   const [step, setStep] = useState(0);
