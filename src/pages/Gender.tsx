@@ -3,10 +3,13 @@ import s from '../styles.module.css';
 import Button from '../components/Button';
 
 const Gender = () => {
-  const [isChecked, setIsChecked] = useState('male');
+  const [isChecked, setIsChecked] = useState(() => {
+    return localStorage.getItem('gender') || 'male';
+  });
 
   function handleClick(e: React.ChangeEvent<HTMLInputElement>) {
     setIsChecked(e.target.value);
+    localStorage.setItem('gender', e.target.value);
   }
 
   return (
