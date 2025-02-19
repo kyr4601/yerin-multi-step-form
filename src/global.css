@@ -9,13 +9,3 @@ body {
   padding: 0;
   background-color: aqua;
 }
-
-div,
-p,
-section,
-article,
-span,
-main {
-  margin: 0;
-  padding: 0;
-}

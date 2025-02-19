@@ -8,6 +8,7 @@ const Hobby = lazy(() => import('./pages/Hobby'));
 const Summary = lazy(() => import('./pages/Summary'));
 
 import ProgressBar from './components/ProgressBar';
+import './global.css';
 
 function App() {
   return (
