@@ -19,6 +19,7 @@ const Button = ({ type, children, isDisabled = false }: BtnProps) => {
 
     if (currentPage === pages.length - 1) {
       alert('제출이 완료되었어요!');
+      localStorage.clear();
       navigate('/');
     } else {
       navigate(pages[currentPage + 1]);

@@ -1,12 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../components/Button';
 import s from '../styles.module.css';
 
 const Summary = () => {
-  const [inputCount, setInputCount] = useState(0);
+  const [summary, setSummary] = useState(() => {
+    return localStorage.getItem('summary') || '';
+  });
+  const [inputCount, setInputCount] = useState(summary.length);
+
+  useEffect(() => {
+    const debouncedSummary = setTimeout(() => {
+      localStorage.setItem('summary', summary);
+    }, 1000);
+
+    return () => clearInterval(debouncedSummary);
+  }, [summary]);
 
   function handleInput(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setInputCount(e.target.value.length);
+    setSummary(e.target.value);
   }
 
   return (
@@ -19,6 +31,7 @@ const Summary = () => {
           onChange={handleInput}
           rows={10}
           cols={30}
+          value={summary}
         />
         <p>{inputCount}/100</p>
       </div>
