@@ -10,7 +10,7 @@ const Summary = () => {
   }
 
   return (
-    <section className={s.container}>
+    <main className={s.container}>
       <h1>자기소개를 해주세요</h1>
       <div>
         <textarea
@@ -28,7 +28,7 @@ const Summary = () => {
           완료
         </Button>
       </div>
-    </section>
+    </main>
   );
 };
 

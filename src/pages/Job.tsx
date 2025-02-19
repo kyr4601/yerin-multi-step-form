@@ -9,7 +9,7 @@ const Job = () => {
     setIsDisabled(e.target.value === '선택');
   }
   return (
-    <section className={s.container}>
+    <main className={s.container}>
       <h1>직군을 선택해주세요</h1>
       <select name="jobs" onChange={handleSelect}>
         <option value="선택">선택</option>
@@ -25,7 +25,7 @@ const Job = () => {
           다음
         </Button>
       </div>
-    </section>
+    </main>
   );
 };
 

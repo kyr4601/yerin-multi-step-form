@@ -10,7 +10,7 @@ const Gender = () => {
   }
 
   return (
-    <section className={s.container}>
+    <main className={s.container}>
       <h1>성별을 선택해주세요</h1>
       <div>
         <label>
@@ -36,7 +36,7 @@ const Gender = () => {
         <Button type={'prev'}>이전</Button>
         <Button type={'next'}>다음</Button>
       </div>
-    </section>
+    </main>
   );
 };
 

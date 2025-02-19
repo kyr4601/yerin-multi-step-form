@@ -9,7 +9,7 @@ const Name = () => {
     setIsDisabled(e.target.value.length < 1);
   }
   return (
-    <section className={s.container}>
+    <main className={s.container}>
       <h1>이름을 입력해주세요</h1>
       <input type="text" onChange={handleInput} />
       <div className={s.btnContainer}>
@@ -18,7 +18,7 @@ const Name = () => {
           다음
         </Button>
       </div>
-    </section>
+    </main>
   );
 };
 

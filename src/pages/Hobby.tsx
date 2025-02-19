@@ -30,7 +30,7 @@ const Hobby = () => {
     setIsDisabled(newSelected.length === 0);
   }
   return (
-    <section className={s.container}>
+    <main className={s.container}>
       <h1>취미를 선택해주세요(최대 3개)</h1>
       <div className={s.checkContainer}>
         {hobbies.map((hobby) => (
@@ -48,7 +48,7 @@ const Hobby = () => {
           다음
         </Button>
       </div>
-    </section>
+    </main>
   );
 };
 
