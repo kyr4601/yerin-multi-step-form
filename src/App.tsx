@@ -1,25 +1,29 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router';
-import Main from './pages/Main';
-import Name from './pages/Name';
-import Gender from './pages/Gender';
-import Job from './pages/Job';
-import Hobby from './pages/Hobby';
-import Summary from './pages/Summary';
+const Main = lazy(() => import('./pages/Main'));
+const Name = lazy(() => import('./pages/Name'));
+const Gender = lazy(() => import('./pages/Gender'));
+const Job = lazy(() => import('./pages/Job'));
+const Hobby = lazy(() => import('./pages/Hobby'));
+const Summary = lazy(() => import('./pages/Summary'));
+
 import ProgressBar from './components/ProgressBar';
 
 function App() {
   return (
-    <BrowserRouter>
-      <ProgressBar />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/name" element={<Name />} />
-        <Route path="/gender" element={<Gender />} />
-        <Route path="/job" element={<Job />} />
-        <Route path="/hobby" element={<Hobby />} />
-        <Route path="/summary" element={<Summary />} />
-      </Routes>
-    </BrowserRouter>
+    <Suspense fallback={<p>loading</p>}>
+      <BrowserRouter>
+        <ProgressBar />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/name" element={<Name />} />
+          <Route path="/gender" element={<Gender />} />
+          <Route path="/job" element={<Job />} />
+          <Route path="/hobby" element={<Hobby />} />
+          <Route path="/summary" element={<Summary />} />
+        </Routes>
+      </BrowserRouter>
+    </Suspense>
   );
 }
 
