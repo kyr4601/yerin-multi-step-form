@@ -15,8 +15,11 @@ const hobbies = [
 ];
 
 const Hobby = () => {
-  const [selected, setSelected] = useState<string[]>([]);
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [selected, setSelected] = useState<string[]>(() => {
+    const initSelected = localStorage.getItem('hobby');
+    return initSelected ? JSON.parse(initSelected) : [];
+  });
+  const [isDisabled, setIsDisabled] = useState(selected.length === 0);
 
   function handleCheck(hobby: string) {
     let newSelected = selected;
@@ -28,10 +31,12 @@ const Hobby = () => {
 
     setSelected(newSelected);
     setIsDisabled(newSelected.length === 0);
+    localStorage.setItem('hobby', JSON.stringify(newSelected));
   }
   return (
     <main className={s.container}>
-      <h1>취미를 선택해주세요(최대 3개)</h1>
+      <h1>취미를 선택해주세요</h1>
+      <span>최대 3개 선택 가능</span>
       <div className={s.checkContainer}>
         {hobbies.map((hobby) => (
           <CheckBox
