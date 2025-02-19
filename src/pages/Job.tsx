@@ -6,11 +6,7 @@ const Job = () => {
   const [isDisabled, setIsDisabled] = useState(true);
 
   function handleSelect(e: React.ChangeEvent<HTMLSelectElement>) {
-    if (e.target.value !== '선택') {
-      setIsDisabled(false);
-    } else {
-      setIsDisabled(true);
-    }
+    setIsDisabled(e.target.value === '선택');
   }
   return (
     <section className={s.container}>

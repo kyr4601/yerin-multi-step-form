@@ -24,7 +24,9 @@ const Summary = () => {
       </div>
       <div className={s.btnContainer}>
         <Button type={'prev'}>이전</Button>
-        <Button type={'next'}>완료</Button>
+        <Button type={'next'} isDisabled={inputCount < 1}>
+          완료
+        </Button>
       </div>
     </section>
   );

@@ -6,11 +6,7 @@ const Name = () => {
   const [isDisabled, setIsDisabled] = useState(true);
 
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
-    if (e.target.value.length >= 1) {
-      setIsDisabled(false);
-    } else {
-      setIsDisabled(true);
-    }
+    setIsDisabled(e.target.value.length < 1);
   }
   return (
     <section className={s.container}>
