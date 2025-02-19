@@ -1,15 +1,21 @@
-html, body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background-color: aqua;
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
 }
 
-div, p, section, article, span {
-    margin: 0;
-    padding: 0;
+div,
+p,
+section,
+article,
+span,
+main {
+  margin: 0;
+  padding: 0;
 }

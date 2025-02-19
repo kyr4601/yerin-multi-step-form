@@ -5,10 +5,12 @@ import Gender from './pages/Gender';
 import Job from './pages/Job';
 import Hobby from './pages/Hobby';
 import Summary from './pages/Summary';
+import ProgressBar from './components/ProgressBar';
 
 function App() {
   return (
     <BrowserRouter>
+      <ProgressBar />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/name" element={<Name />} />
