@@ -14,6 +14,8 @@ const hobbies = [
   '기타',
 ];
 
+/* 취미 선택 페이지 */
+
 const Hobby = () => {
   const [selected, setSelected] = useState<string[]>(() => {
     const initSelected = localStorage.getItem('hobby');
@@ -21,6 +23,8 @@ const Hobby = () => {
   });
   const [isDisabled, setIsDisabled] = useState(selected.length === 0);
 
+  //선택된 항목을 newSelected 배열로 관리
+  //클릭시 이미 선택된 항목이라면 제거하고, 새로운 항목이라면 선택목록이 3개 미만일때만 추가 가능
   function handleCheck(hobby: string) {
     let newSelected = selected;
     if (selected.includes(hobby)) {

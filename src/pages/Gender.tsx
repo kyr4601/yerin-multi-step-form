@@ -2,6 +2,8 @@ import { useState } from 'react';
 import s from '../styles.module.css';
 import Button from '../components/Button';
 
+/* 성별 선택 페이지 */
+
 const Gender = () => {
   const [isChecked, setIsChecked] = useState(() => {
     return localStorage.getItem('gender') || 'male';

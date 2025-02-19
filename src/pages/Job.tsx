@@ -2,6 +2,11 @@ import { useState } from 'react';
 import Button from '../components/Button';
 import s from '../styles.module.css';
 
+/* 직군 선택 페이지 */
+/* select, option 태그를 사용해 드롭다운을 구현하였습니다.
+/* 기본값인 '선택' 상태일 경우 다음페이지로 넘어갈 수 없습니다.
+*/
+
 const Job = () => {
   const [selected, setSelected] = useState(() => {
     return localStorage.getItem('job') || '선택';

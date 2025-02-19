@@ -1,6 +1,8 @@
 import s from '../styles.module.css';
 import Button from '../components/Button';
 
+/* 시작페이지 */
+
 const Main = () => {
   return (
     <main className={s.container}>

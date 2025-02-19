@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import Button from '../components/Button';
 import s from '../styles.module.css';
 
+/* 이름 입력 페이지 */
+/* 입력값에 debounce를 적용해 불필요하게 모든 입력에 대해 스토리지 업데이트를 하지 않도록 했습니다.
+ */
+
 const Summary = () => {
   const [summary, setSummary] = useState(() => {
     return localStorage.getItem('summary') || '';
